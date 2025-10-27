@@ -3,8 +3,8 @@
  */
 
 // Set the base URL for the API.
-// Make sure your FastAPI server is running on port 8000.
-const API_URL = "http://localhost:8000";
+// Use environment variable for production, fallback to localhost for development.
+const API_URL = import.meta.env.VITE_API_BASE_URL || "http://localhost:8000";
 
 /**
  * Generates a new quiz by sending a URL to the backend.
